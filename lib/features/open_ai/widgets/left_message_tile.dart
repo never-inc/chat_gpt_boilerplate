@@ -84,6 +84,7 @@ class LeftMessageTile extends StatelessWidget {
                             width: 160 * imageUrls.length.toDouble(),
                             height: 160,
                             child: ListView.builder(
+                              padding: EdgeInsets.zero,
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
                                 final imageUrl = imageUrls[index];

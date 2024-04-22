@@ -145,123 +145,127 @@ class _State extends ConsumerState<ChatPage> {
             children: [
               /// Messages
               Expanded(
-                child: NotificationListener<ScrollUpdateNotification>(
-                  onNotification: (notification) {
-                    final items = messagesAsyncValue.asData?.value ?? [];
-                    if (items.length >= Message.pageSize &&
-                        notification.metrics.extentAfter == 0) {
-                      Future(() async {
-                        if (_isLoading) {
-                          return;
-                        }
-                        _isLoading = true;
-                        try {
-                          await ref
-                              .read(fetchMessagesProvider.notifier)
-                              .fetchMore();
-                        } on Exception catch (e) {
-                          debugPrint(e.toString());
-                        } finally {
-                          _isLoading = false;
-                        }
-                      });
-                    }
-                    return true;
-                  },
-                  child: messagesAsyncValue.when(
-                    error: (e, _) => Center(
-                      child: Text(
-                        e.toString(),
-                        style: context.mediumStyle,
-                      ),
-                    ),
-                    loading: () => const Center(
-                      child: CupertinoActivityIndicator(),
-                    ),
-                    data: (res) {
-                      return ListView.builder(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16,
-                          horizontal: 8,
-                        ),
-                        physics: const BouncingScrollPhysics(
-                          parent: AlwaysScrollableScrollPhysics(),
-                        ),
-                        reverse: true,
-                        controller: _scrollController,
-                        itemBuilder: (context, index) {
-                          final robotName = context.l10n.robotName;
-                          final robotAvatar = CircleAvatar(
-                            backgroundColor: context.backgroundColor,
-                            foregroundColor: context.iconColor,
-                            child: const Icon(Icons.smart_toy_outlined),
-                          );
-                          final backgroundColor = context.backgroundColor;
-
-                          final message = res[index];
-                          final date = Message.getDateTile(
-                            index,
-                            res.map((e) => e.date).toList(),
-                          );
-
-                          return Padding(
-                            padding: const EdgeInsets.only(top: 12),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                if (date != null)
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 12,
-                                    ),
-                                    child: DateTile(date: date),
-                                  ),
-                                switch (message) {
-                                  TextMessage(
-                                    :final text,
-                                    :final images,
-                                    :final date,
-                                    :final userType
-                                  ) =>
-                                    switch (userType) {
-                                      UserType.robot => LeftMessageTile(
-                                          text: text,
-                                          imageUrls: images
-                                              ?.map((e) => e.url)
-                                              .whereType<String>()
-                                              .toList(),
-                                          date: date,
-                                          name: robotName,
-                                          avatar: robotAvatar,
-                                          backgroundColor: backgroundColor,
-                                        ),
-                                      UserType.you => RightMessageTile(
-                                          text: text,
-                                          date: date,
-                                          backgroundColor: backgroundColor,
-                                        ),
-                                    },
-                                  WelcomeMessage(:final date) =>
-                                    LeftMessageTile(
-                                      text: context.l10n.welcomeMessage,
-                                      date: date,
-                                      name: robotName,
-                                      avatar: robotAvatar,
-                                      backgroundColor: backgroundColor,
-                                    ),
-                                  Loading() => LeftLoadingTile(
-                                      name: robotName,
-                                      avatar: robotAvatar,
-                                      backgroundColor: backgroundColor,
-                                    ),
-                                },
-                              ],
-                            ),
-                          );
-                        },
-                        itemCount: res.length,
-                      );
+                child: SafeArea(
+                  top: false,
+                  bottom: false,
+                  child: NotificationListener<ScrollUpdateNotification>(
+                    onNotification: (notification) {
+                      final items = messagesAsyncValue.asData?.value ?? [];
+                      if (items.length >= Message.pageSize &&
+                          notification.metrics.extentAfter == 0) {
+                        Future(() async {
+                          if (_isLoading) {
+                            return;
+                          }
+                          _isLoading = true;
+                          try {
+                            await ref
+                                .read(fetchMessagesProvider.notifier)
+                                .fetchMore();
+                          } on Exception catch (e) {
+                            debugPrint(e.toString());
+                          } finally {
+                            _isLoading = false;
+                          }
+                        });
+                      }
+                      return true;
                     },
+                    child: messagesAsyncValue.when(
+                      error: (e, _) => Center(
+                        child: Text(
+                          e.toString(),
+                          style: context.mediumStyle,
+                        ),
+                      ),
+                      loading: () => const Center(
+                        child: CupertinoActivityIndicator(),
+                      ),
+                      data: (res) {
+                        return ListView.builder(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 16,
+                            horizontal: 8,
+                          ),
+                          physics: const BouncingScrollPhysics(
+                            parent: AlwaysScrollableScrollPhysics(),
+                          ),
+                          reverse: true,
+                          controller: _scrollController,
+                          itemBuilder: (context, index) {
+                            final robotName = context.l10n.robotName;
+                            final robotAvatar = CircleAvatar(
+                              backgroundColor: context.backgroundColor,
+                              foregroundColor: context.iconColor,
+                              child: const Icon(Icons.smart_toy_outlined),
+                            );
+                            final backgroundColor = context.backgroundColor;
+
+                            final message = res[index];
+                            final date = Message.getDateTile(
+                              index,
+                              res.map((e) => e.date).toList(),
+                            );
+
+                            return Padding(
+                              padding: const EdgeInsets.only(top: 12),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  if (date != null)
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 12,
+                                      ),
+                                      child: DateTile(date: date),
+                                    ),
+                                  switch (message) {
+                                    TextMessage(
+                                      :final text,
+                                      :final images,
+                                      :final date,
+                                      :final userType
+                                    ) =>
+                                      switch (userType) {
+                                        UserType.robot => LeftMessageTile(
+                                            text: text,
+                                            imageUrls: images
+                                                ?.map((e) => e.url)
+                                                .whereType<String>()
+                                                .toList(),
+                                            date: date,
+                                            name: robotName,
+                                            avatar: robotAvatar,
+                                            backgroundColor: backgroundColor,
+                                          ),
+                                        UserType.you => RightMessageTile(
+                                            text: text,
+                                            date: date,
+                                            backgroundColor: backgroundColor,
+                                          ),
+                                      },
+                                    WelcomeMessage(:final date) =>
+                                      LeftMessageTile(
+                                        text: context.l10n.welcomeMessage,
+                                        date: date,
+                                        name: robotName,
+                                        avatar: robotAvatar,
+                                        backgroundColor: backgroundColor,
+                                      ),
+                                    Loading() => LeftLoadingTile(
+                                        name: robotName,
+                                        avatar: robotAvatar,
+                                        backgroundColor: backgroundColor,
+                                      ),
+                                  },
+                                ],
+                              ),
+                            );
+                          },
+                          itemCount: res.length,
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
