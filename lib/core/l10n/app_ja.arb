@@ -1,0 +1,126 @@
+{
+  "@@locale": "ja",
+  "robotName": "AI",
+  "@robotName": {
+    "description": ""
+  },
+  "welcomeMessage": "ようこそ、Flutter Chat GPTボイラープレートへ！\n\n左上の設定より\nAPI KeyとSystem Messageを\n設定してからご利用ください。",
+  "@welcomeMessage": {
+    "description": ""
+  },
+  "settings": "設定",
+  "@settings": {
+    "description": ""
+  },
+  "openAIAPIKey": "Open AI API Key",
+  "@openAIAPIKey": {
+    "description": ""
+  },
+  "chatSystemMessage": "Chat System Message",
+  "@chatSystemMessage": {
+    "description": ""
+  },
+  "openAISystemModel": "Open AI Model",
+  "@openAISystemModel": {
+    "description": ""
+  },
+  "other": "その他",
+  "@other": {
+    "description": ""
+  },
+  "save": "保存",
+  "@save": {
+    "description": ""
+  },
+  "close": "閉じる",
+  "@close": {
+    "description": ""
+  },
+  "obtainingAnAPIKey": "API Keyを取得する",
+  "@obtainingAnAPIKey": {
+    "description": ""
+  },
+  "aboutSystemMessage": "System messageについて",
+  "@aboutSystemMessage": {
+    "description": ""
+  },
+  "aboutModels": "Modelについて",
+  "@aboutModels": {
+    "description": ""
+  },
+  "chatSystemMessagePlaceholder": "あなたは猫です。全ての回答を猫になって答えてください。語尾は必ず「にゃ」を付けて回答してください。",
+  "@chatSystemMessagePlaceholder": {
+    "description": ""
+  },
+  "sendPastMessages": "過去のメッセージも送信",
+  "@sendPastMessages": {
+    "description": ""
+  },
+  "deleteMessages": "メッセージを削除する",
+  "@deleteMessages": {
+    "description": ""
+  },
+  "messageDeletionQuestionTitle": "メッセージを全て削除しますか？",
+  "@messageDeletionQuestionTitle": {
+    "description": ""
+  },
+  "messageDeletionSucceeded": "メッセージを削除しました。",
+  "@messageDeletionSucceeded": {
+    "description": ""
+  },
+  "messageDeletionFailed": "メッセージを削除に失敗しました。",
+  "@messageDeletionFailed": {
+    "description": ""
+  },
+  "deleteImageCaches": "画像キャッシュを削除する",
+  "@deleteImageCaches": {
+    "description": ""
+  },
+  "imageCachesDeletionQuestionTitle": "画像キャッシュを全て削除しますか？",
+  "@imageCachesDeletionQuestionTitle": {
+    "description": ""
+  },
+  "imageCachesDeletionSucceeded": "画像キャッシュを削除しました。",
+  "@imageCachesDeletionSucceeded": {
+    "description": ""
+  },
+  "imageCachesDeletionFailed": "画像キャッシュを削除に失敗しました。",
+  "@imageCachesDeletionFailed": {
+    "description": ""
+  },
+  "today": "今日",
+  "@today": {
+    "description": ""
+  },
+  "yesterday": "昨日",
+  "@yesterday": {
+    "description": ""
+  },
+  "xDaysAgo": "{v1}日前",
+  "@xDaysAgo": {
+    "description": "",
+    "placeholders": {
+      "v1": {}
+    }
+  },
+  "text": "Text",
+  "@text": {
+    "description": ""
+  },
+  "image": "Image",
+  "@image": {
+    "description": ""
+  },
+  "model": "Model",
+  "@model": {
+    "description": ""
+  },
+  "openAIChatModeTitle": "生成したい種類を選択してください。",
+  "@openAIChatModeTitle": {
+    "description": ""
+  },
+  "clear": "クリア",
+  "@clear": {
+    "description": ""
+  }
+}

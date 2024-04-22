@@ -1,0 +1,10 @@
+include: package:very_good_analysis/analysis_options.yaml
+analyzer:
+  exclude:
+    - lib/**/*.g.dart
+linter:
+  rules:
+    always_use_package_imports: false # 相対パスを利用するため
+    lines_longer_than_80_chars: false # いろんな種類のボイラプレートまとめるためにはどうしてもクラス名が長くなってしまうため
+    public_member_api_docs: false # doc記入は省略させていただきます
+    prefer_constructors_over_static_methods: false # static関数で変換処理を実装したいため

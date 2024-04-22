@@ -1,0 +1,126 @@
+{
+  "@@locale": "en",
+  "robotName": "AI",
+  "@robotName": {
+    "description": ""
+  },
+  "welcomeMessage": "Welcome to Flutter Chat GPT boilerplate!\n\nPlease set the API Key and System Message from the settings in the upper left corner before use.",
+  "@welcomeMessage": {
+    "description": ""
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": ""
+  },
+  "openAIAPIKey": "Open AI API Key",
+  "@openAIAPIKey": {
+    "description": ""
+  },
+  "chatSystemMessage": "Chat System Message",
+  "@chatSystemMessage": {
+    "description": ""
+  },
+  "openAISystemModel": "Open AI Model",
+  "@openAISystemModel": {
+    "description": ""
+  },
+  "other": "Other",
+  "@other": {
+    "description": ""
+  },
+  "save": "Save",
+  "@save": {
+    "description": ""
+  },
+  "close": "Close",
+  "@close": {
+    "description": ""
+  },
+  "obtainingAnAPIKey": "Obtaining an API Key",
+  "@obtainingAnAPIKey": {
+    "description": ""
+  },
+  "aboutSystemMessage": "About System message",
+  "@aboutSystemMessage": {
+    "description": ""
+  },
+  "aboutModels": "About Models",
+  "@aboutModels": {
+    "description": ""
+  },
+  "chatSystemMessagePlaceholder": "You are the cat. Please answer all answers as a cat.",
+  "@chatSystemMessagePlaceholder": {
+    "description": ""
+  },
+  "sendPastMessages": "Send past messages",
+  "@sendPastMessages": {
+    "description": ""
+  },
+  "deleteMessages": "Delete messages",
+  "@deleteMessages": {
+    "description": ""
+  },
+  "messageDeletionQuestionTitle": "Do you want to delete all messages?",
+  "@messageDeletionQuestionTitle": {
+    "description": ""
+  },
+  "messageDeletionSucceeded": "Message deleted.",
+  "@messageDeletionSucceeded": {
+    "description": ""
+  },
+  "messageDeletionFailed": "Failed to delete message.",
+  "@messageDeletionFailed": {
+    "description": ""
+  },
+  "deleteImageCaches": "Delete image caches",
+  "@deleteImageCaches": {
+    "description": ""
+  },
+  "imageCachesDeletionQuestionTitle": "Do you want to delete image caches?",
+  "@imageCachesDeletionQuestionTitle": {
+    "description": ""
+  },
+  "imageCachesDeletionSucceeded": "Image caches deleted.",
+  "@imageCachesDeletionSucceeded": {
+    "description": ""
+  },
+  "imageCachesDeletionFailed": "Failed to image caches.",
+  "@imageCachesDeletionFailed": {
+    "description": ""
+  },
+  "today": "Today",
+  "@today": {
+    "description": ""
+  },
+  "yesterday": "Yesterday",
+  "@yesterday": {
+    "description": ""
+  },
+  "xDaysAgo": "{v1} days ago",
+  "@xDaysAgo": {
+    "description": "",
+    "placeholders": {
+      "v1": {}
+    }
+  },
+  "text": "Text",
+  "@text": {
+    "description": ""
+  },
+  "image": "Image",
+  "@image": {
+    "description": ""
+  },
+  "model": "Model",
+  "@model": {
+    "description": ""
+  },
+  "openAIChatModeTitle": "Please select the chat mode to generate.",
+  "@openAIChatModeTitle": {
+    "description": ""
+  },
+  "clear": "Clear",
+  "@clear": {
+    "description": ""
+  }
+}
