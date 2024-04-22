@@ -355,6 +355,8 @@ class _State extends ConsumerState<ChatPage> {
                                       _focusedFormField = value;
                                     });
                                   },
+
+                                  /// Macで Command + Enter で送信できるように設定
                                   onKeyEvent: (node, event) {
                                     if (_isKeyDownMetaLeft &&
                                         event.logicalKey ==

@@ -7,14 +7,14 @@ part of 'router.dart';
 // **************************************************************************
 
 List<RouteBase> get $appRoutes => [
-      $chatGPTRoute,
+      $chatRoute,
     ];
 
-RouteBase get $chatGPTRoute => GoRouteData.$route(
+RouteBase get $chatRoute => GoRouteData.$route(
       path: '/',
       name: '/',
-      parentNavigatorKey: ChatGPTRoute.$parentNavigatorKey,
-      factory: $ChatGPTRouteExtension._fromState,
+      parentNavigatorKey: ChatRoute.$parentNavigatorKey,
+      factory: $ChatRouteExtension._fromState,
       routes: [
         GoRouteData.$route(
           path: 'image_viewer',
@@ -25,8 +25,8 @@ RouteBase get $chatGPTRoute => GoRouteData.$route(
       ],
     );
 
-extension $ChatGPTRouteExtension on ChatGPTRoute {
-  static ChatGPTRoute _fromState(GoRouterState state) => const ChatGPTRoute();
+extension $ChatRouteExtension on ChatRoute {
+  static ChatRoute _fromState(GoRouterState state) => const ChatRoute();
 
   String get location => GoRouteData.$location(
         '/',

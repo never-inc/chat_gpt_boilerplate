@@ -14,7 +14,7 @@ final router = GoRouter(
   debugLogDiagnostics: true,
 );
 
-@TypedGoRoute<ChatGPTRoute>(
+@TypedGoRoute<ChatRoute>(
   path: '/',
   name: '/',
   routes: [
@@ -24,8 +24,8 @@ final router = GoRouter(
     ),
   ],
 )
-class ChatGPTRoute extends GoRouteData {
-  const ChatGPTRoute();
+class ChatRoute extends GoRouteData {
+  const ChatRoute();
 
   @override
   Widget build(BuildContext context, GoRouterState state) => const ChatPage();

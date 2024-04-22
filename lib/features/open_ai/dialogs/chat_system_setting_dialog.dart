@@ -61,6 +61,8 @@ class _State extends ConsumerState<ChatSystemSettingDialog> {
                   padding: const EdgeInsets.only(top: 8),
                   child: FocusScope(
                     node: _focusScopeNode,
+
+                    /// Macで Command + Enter で送信できるように設定
                     onKeyEvent: (node, event) {
                       if (_isKeyDownMetaLeft &&
                           event.logicalKey == LogicalKeyboardKey.enter) {
