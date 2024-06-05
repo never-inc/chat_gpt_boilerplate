@@ -21,7 +21,7 @@ class LocaleIcon extends ConsumerWidget {
         ref.read(localeTypeControllerProvider.notifier).setState(value);
       },
       icon: Text(
-        localeType == LocaleType.en ? 'JP' : 'EN',
+        localeType == LocaleType.ja ? 'JP' : 'EN',
         style: context.largeStyle.copyWith(
           fontWeight: FontWeight.bold,
           color: color,

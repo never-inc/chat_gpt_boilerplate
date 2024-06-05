@@ -22,7 +22,7 @@ class ThemeIcon extends ConsumerWidget {
         ref.read(themeModeControllerProvider.notifier).setState(value);
       },
       icon: Icon(
-        themeMode == ThemeMode.dark ? Icons.light_mode : Icons.dark_mode,
+        themeMode == ThemeMode.dark ? Icons.dark_mode : Icons.light_mode,
         color: color,
       ),
     );

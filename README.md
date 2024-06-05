@@ -25,14 +25,12 @@ This is Flutter's Chat GPT boilerplate.
 ## System Requirements
 
 ```sh
-[✓] Flutter (Channel stable, 3.19.6, on macOS 14.3.1 23D60 darwin-arm64, locale ja-JP)
+[✓] Flutter (Channel stable, 3.22.1, on macOS 14.3.1 23D60 darwin-arm64, locale ja-JP)
 [✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
-[✓] Xcode - develop for iOS and macOS (Xcode 15.3)
+[✓] Xcode - develop for iOS and macOS (Xcode 15.4)
 [✓] Chrome - develop for the web
-[✓] Android Studio (version 2023.2)
-[✓] VS Code (version 1.88.1)
-[✓] Connected device (5 available)
-[✓] Network resources
+[✓] Android Studio (version 2023.3)
+[✓] VS Code (version 1.89.1)
 ```
 
 Android, iOS, macOS apps are guaranteed to work, but other platforms are not covered.

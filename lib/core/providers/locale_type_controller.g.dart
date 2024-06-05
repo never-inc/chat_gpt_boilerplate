@@ -7,7 +7,7 @@ part of 'locale_type_controller.dart';
 // **************************************************************************
 
 String _$localeTypeControllerHash() =>
-    r'cd2d13e131c128a2307024cd100552dcfd4f9127';
+    r'70009c662b1b17504c8aebc2eb97fbf89929425f';
 
 /// See also [LocaleTypeController].
 @ProviderFor(LocaleTypeController)
